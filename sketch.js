@@ -3,12 +3,13 @@ let gota = [];
 const nGotas = 200;//Cantidad de gotas
 let newElem;
 
-let diam = 8; //Tamaño del circulo
+let diam = 10; //Tamaño del circulo
 
 let letras = '1234567890ABCDEFGHIHKLMNOPQRSTUVWXZY';
 
 function setup() {
   createCanvas(1080 , 720);
+  textAlign(CENTER, CENTER);
   // frameRate(20);
   for (let i = 0; i < nGotas; i++) {
     newElem = new drop(width, height);
@@ -60,7 +61,7 @@ class drop{
     line (this.x, this.y, this.x, this.y+this.len);
     */
 
-    //----Circulos----
+  
 
     
     let col = color(120,250,80);
@@ -76,17 +77,10 @@ class drop{
 				this.x,
 				this.y - diam * i
 			);
-
+      //----Circulos----
       //circle (this.x, this.y - ( diam * i), diam);      
     }
     
-    
-    // var n = 0;
-    // if (n <= random(4,6)) {
-    //   circle (this.x, this.y + (n * 8), 8);
-    //   n++;
-    // }
-
     // let col = color(120,250,80);
     // col.setAlpha(120);
     // noStroke();
@@ -94,8 +88,7 @@ class drop{
     // circle (this.x, this.y, 8);
     // circle (this.x, this.y+8, 8);
     // circle (this.x, this.y+16, 8);
-    // circle (this.x, this.y+24, 8);
-    
+    // circle (this.x, this.y+24, 8);    
     
   }
 }
